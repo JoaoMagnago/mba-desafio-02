@@ -5,5 +5,5 @@ export default function MarketplaceLayout({
 }: {
   children: ReactNode
 }) {
-  return <div>{children}</div>
+  return <div className="mx-auto min-h-screen w-full">{children}</div>
 }

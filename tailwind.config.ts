@@ -9,8 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: 'var(--font-inter)',
+        sans: 'var(--font-poppins)',
+        'title-lg': ` 1.75rem 120% 700`,
       },
+      fontSize: {},
       colors: {
         'orange-base': '#F24D0D',
         'orange-dark': '#C43C08',
