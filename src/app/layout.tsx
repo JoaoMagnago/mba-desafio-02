@@ -6,8 +6,8 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | marketplace',
-    default: 'marketplace',
+    template: '%s | Marketplace',
+    default: 'Marketplace',
   },
 }
 
@@ -18,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html className={inter.variable} lang="pt">
-      <body className="bg-zinc-950 text-zinc-50 antialiased">{children}</body>
+      <body className="bg-background text-gray-400 antialiased">
+        {children}
+      </body>
     </html>
   )
 }
