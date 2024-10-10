@@ -13,7 +13,7 @@ export default function SignInLayout({ children }: { children: ReactNode }) {
         />
 
         <div className="flex flex-col gap-4">
-          <div className="">Marketplace</div>
+          <h1 className={''}>Marketplace</h1>
           <div>Painel de Vendedor</div>
         </div>
       </div>

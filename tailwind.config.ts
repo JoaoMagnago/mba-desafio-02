@@ -10,9 +10,8 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: 'var(--font-poppins)',
-        'title-lg': ` 1.75rem 120% 700`,
+        title: `var(--font-dm-sans)`,
       },
-      fontSize: {},
       colors: {
         'orange-base': '#F24D0D',
         'orange-dark': '#C43C08',
