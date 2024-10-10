@@ -87,13 +87,23 @@ export default function SignIn() {
                 width={24}
                 height={24}
                 quality={80}
-                color="white"
-                className="fill-white text-white"
               />
             </button>
           </div>
         </div>
-        <div>Cadastrar</div>
+        <div className="flex flex-col gap-5">
+          <span>Ainda não tem um conta?</span>
+          <button className="flex items-center justify-between w-full h-[3.5rem] px-5 text-orange-base bg-transparent rounded-[10px] border border-spacing-1 border-orange-base hover:brightness-105 transition-all ease-in">
+            Cadastrar{' '}
+            <Image
+              alt=""
+              src="/icons/arrow-right-03.svg"
+              width={24}
+              height={24}
+              quality={80}
+            />
+          </button>
+        </div>
       </div>
     </div>
   )
