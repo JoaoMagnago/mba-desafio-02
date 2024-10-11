@@ -1,5 +1,9 @@
 'use client'
 
+import FormInput from '@/components/formInput'
+import AccessIcon from '@/components/icons/accessIcon'
+import MailIcon from '@/components/icons/mailIcon'
+import ViewIcon from '@/components/icons/viewIcon'
 import LogoWithName from '@/components/logoWithName'
 import Image from 'next/image'
 import { useState } from 'react'
@@ -31,53 +35,26 @@ export default function SignIn() {
           </div>
 
           <div className="flex flex-col gap-5">
-            <div className="flex flex-col">
-              <span className="label-md text-gray-300">e-mail</span>
-              <div className="flex items-center gap-[0.625rem] border-b border-spacing-[1px] border-gray-100">
-                <Image
-                  alt=""
-                  src="/icons/mail.svg"
-                  width={24}
-                  height={24}
-                  quality={50}
-                />
-                <input
-                  className="body-md w-full placeholder-gray-200 h-[3rem] outline-none"
-                  placeholder="Seu e-mail cadastrado"
-                />
-              </div>
-            </div>
+            <FormInput
+              label={'e-mail'}
+              placeholder={'Seu e-mail cadastrado'}
+              leftElement={<MailIcon fill={'#949494'} />}
+            />
 
-            <div className="flex flex-col">
-              <span className="label-md text-gray-300">senha</span>
-              <div className="flex items-center gap-[0.625rem] border-b border-spacing-[1px] border-gray-100">
-                <Image
-                  alt=""
-                  src="/icons/access.svg"
-                  width={24}
-                  height={24}
-                  quality={50}
-                />
-                <input
-                  className="body-md w-full placeholder-gray-200 h-[3rem] outline-none"
-                  type={canSeePassword ? 'text' : 'password'}
-                  placeholder="Seu senha de acesso"
-                />
+            <FormInput
+              label={'senha'}
+              placeholder={'Sua senha de acesso'}
+              type={canSeePassword ? 'text' : 'password'}
+              leftElement={<AccessIcon fill={'#949494'} />}
+              rightElement={
                 <button
                   className="w-6 h-6"
-                  onClick={() => setCanSeePassword(!canSeePassword)}
+                  onClick={() => setCanSeePassword((prev) => !prev)}
                 >
-                  <Image
-                    alt=""
-                    src="/icons/view.svg"
-                    width={24}
-                    height={24}
-                    quality={50}
-                    className="cursor-pointer"
-                  />
+                  <ViewIcon fill={'#949494'} />
                 </button>
-              </div>
-            </div>
+              }
+            />
 
             <button className="flex items-center justify-between w-full h-[3.5rem] px-5 text-white bg-orange-base rounded-[10px] hover:brightness-105 transition-all ease-in">
               Acessar{' '}
